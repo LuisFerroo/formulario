@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Cadastro</title>
+</head>
+<body>
+
+    <div>
+        <h1>Cadastro de motoristas</h1>
+        <p>Complete suas informações</p>
+        <br>
+    </div>
+
+    <form>
+        <fieldset>
+            <div>
+                <label>Nome</label>
+                <input type="text" name="nome" id="nome">
+            </div>
+
+            <div>
+                <label>Sobrenome</label>
+                <input type="text" name="Sobrenome" id="Sobrenome">
+            </div>
+        </fieldset>
+
+        <div>
+            <label>Email</label>
+            <input type="email" name="email" id="email">
+        </div>
+
+        <div>
+            <label>Que tipo de frete voce costuma carregar?</label>
+            <label>
+                <input type="radio" name="cargas" value="terceiros"checked>Terceiros
+            </label>
+            <label>
+                <input type="radio" name="cargas" value="agregados">Agregados
+            </label>
+            <label>
+                <input type="radio" name="cargas" value="da casa">Da empresa
+            </label>
+        </div>
+
+        <script>
+            // Apenas testando a gambiarra de marcar/desmcarcar botão radio com script
+            $(document).ready(function() {
+                $("input[type='radio']").on("click", function() {
+                    if ($(this).hasClass("marcado")) {
+                        // Desmarca o botão se estiver marcado
+                        $(this).removeClass("marcado");
+                        $(this).prop("checked", false);
+                    } else {
+                        // Marca o botão se não estiver marcado
+                        $(this).addClass("marcado");
+                        $(this).prop("checked", true);
+                    }
+                });
+            });
+        </script> 
+        
+        <div>
+            <label>Expêriencia</label>
+            <select id="experiencia">
+                <option selected disabled value="">Selecione</option>
+                <option>Menos de 1 ano</option>
+                <option>Entre 1 e 3 anos</option>
+                <option>Mais de 3 anos</option>
+            </select>
+        </div>
+    </form>
+
+</body>
+</html>
+👋 Hi, I’m @LuisFerroo
+- 👀 I’m interested in ...
+- 🌱 I’m currently learning ...
+- 💞️ I’m looking to collaborate on ...
+- 📫 How to reach me ...
